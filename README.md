@@ -1,5 +1,5 @@
 # Full_stack_project_Restaurant_website
-#Description:
+# Description:
 
 A website which gives the information about restaurant and helps to order food 🍕🍟🍗.
 This website also gives you the information regarding different food ordering websites.
