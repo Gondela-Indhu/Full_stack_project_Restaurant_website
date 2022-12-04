@@ -1,0 +1,140 @@
+<html>
+<head>
+<style>
+.order{
+	width:  100%;
+	height: 100vh;
+	padding: 70px 0;
+	background-image: url(image/bg2.jpg);
+	background-size:  cover;
+	background-position: center;
+}
+.order h1{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #000;
+	font-size: 50px;
+}
+.order h1 span{
+	color: #fac031;
+	margin-right: 15px;
+	font-family: mv boli;
+}
+.order h1 span::after{
+	content: '';
+	width: 100%;
+	height: 2px;
+	background: #fac031;
+	display: block;
+	position: relative;
+	bottom: 15px;
+}
+.order .order_main{
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+.order .order_main .order_image img{
+	width: 600px;
+}
+.order .order_main form{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 0 10px;
+}
+.order .order_main form .input p{
+	line-height: 25px;
+}
+.order .order_main form .input{
+	margin: 5px;
+}
+.order .order_main form .input input{
+	width: 300px;
+	height: 35px;
+	padding: 0 10px;
+	border: 2px solid #cccccc;
+	background: #eeeeee;
+	outline: none;
+	border-radius: 3px;
+}
+.order .order_main form .input input:focus{
+	border: 2px solid #fac031;
+}
+.order .order_main form .order_btn{
+	padding: 10px 0;
+	background: #fac031;
+	color: white;
+	width: 40%;
+	text-align: center;
+	margin-top: 20px;
+	text-decoration: none;
+}
+</style>
+</head>
+<body>
+	<div class="order" id="order">
+		<h1><span>Order Now</span></h1>
+		<div class="order_main">
+			<div class="order_image">
+			<img src="https://images2.alphacoders.com/568/568372.jpg">
+		</div>
+		<form action = "/ordersubmit" method = "GET">
+		<!--<form action="#">-->
+			<div class="input">
+				<p>Name</p>
+				<input type="text" placeholder="your name" name = "Name" id = "id1">
+			</div>
+			<div class="input">
+				<p>Email</p>
+				<input type="email" placeholder="your email" name = "Email" id = "id2">
+			</div>
+			<div class="input">
+				<p>Mobile Number</p>
+				<input type="tel" placeholder="your number" name = "Number" id = "id3">
+			</div>
+			<div class="input">
+				<p>No.of dishes</p>
+				<input type="number" placeholder="no.of dishes" name = "no_of_dishes" id = "id4">
+			</div>
+			<div class="input">
+				<p>Your Order</p>
+				<input type="text" placeholder="your order" name = "Your_order" id = "id5">
+			</div>
+			<div class="input">
+				<p>Table Number</p>
+				<input type="number" placeholder="your table number" name = "Table_Number" id = "id6">
+			</div>
+			<script>
+			function fieldFunction() {
+				var x = document.getElementById("id1").value; 
+				var a = document.getElementById("id2").value;
+				var b = document.getElementById("id3").value;
+				var c = document.getElementById("id4").value;
+				var d = document.getElementById("id5").value;
+				var e = document.getElementById("id6").value;
+				if(x == ""){
+					alert("Please enter all the fields");
+				}
+				else if(a == ""){
+					alert("Please enter all the fields");
+				}
+				else if(b == ""){
+					alert("Please enter all the fields");
+				}
+				else if(c == ""){
+					alert("Please enter all the fields");
+				}
+				else if(d == ""){
+					alert("Please enter all the fields");
+				}
+				else if(e == ""){
+					alert("Please enter all the fields");
+				}
+			}
+	</script>
+			<button onclick="fieldFunction();" class="order_btn">Order Now</button>		
+			</form>
+			</div>
+</body>
+</html>

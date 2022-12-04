@@ -1,0 +1,409 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Olive Garden</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+      *{
+        padding: 0;
+	      margin: 0;
+	      box-sizing: border-box;
+      }
+      html{
+        scroll-behavior: smooth;
+      }
+      .nav-link{
+        color: #808000;
+      }
+      .nav-link:hover{
+        color: crimson;
+	      transition: 0.3s;
+      }
+      .nav-item{
+	      color: rgb(147, 255, 51);
+	      font-weight: 600;
+	      padding-left: 40px;
+      }
+      .btn0{
+        height: 53px;
+        width: 130px;
+        outline: none;
+        border: none;
+        color: white;
+        cursor: pointer;
+        transition: all 0.4s;
+        background-color: #808000;
+      }
+      .btn0:hover{
+        background: rgb(0,0,0);
+        transition: all 0.4s;
+      }
+      .btn1{
+        height: 53px;
+        width: 130px;
+        background-color: transparent;
+        outline: none;
+        border: 2px solid #808000;
+        color: #808000;
+        transition: all 0.4s;
+        
+      }
+      .btn1:hover{
+        background-color: rgb(0,0,0);
+        transition: all 0.4s;
+        color: white;
+        border: none;
+        outline: none;
+      }
+      /*================================ main section =========================*/
+
+      .main{
+        background: url(https://img.freepik.com/premium-photo/wooden-table-blank-front-blurred-restaurant-background_32771-744.jpg);
+        background-size: cover;
+        min-height: 95vh;
+        width: 100%;
+      }
+      .main h1{
+        font-size: 4rem;
+        font-weight: 600;
+        color: whitesmoke;
+        font-family: sans-serif;
+
+      }
+      .btn2{
+        height: 70px;
+        width: 25%;
+        background-color: #808000;
+        color: white;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        transition: all 0.4s;
+      }
+      .btn2:hover{
+        background-color: rgb(0, 0, 0);
+        transition: all 0.4s;
+      }
+
+      /*------------------- about us -----------------*/
+
+      #about{
+          display: flex;
+          flex-direction: column;
+          box-sizing: border-box;
+          padding: 20px;
+          margin-bottom: 50px;
+      }
+      .container-fluid h1{
+        font-weight: 600;
+        font-size: 3rem;
+        color: #808000;
+      }
+      #pic{
+          display: flex;
+      }
+      #pic img{
+          width: 575px;
+          height: 400px;
+      }
+      #abt{
+          display: flex;
+          flex-direction: column;
+          text-align: justify;
+          padding: 10px;
+      }
+      #abt h2{
+          font-size: 2rem;
+          margin-bottom: 20px;
+          text-align: center;
+      }
+      #abt p{
+        font-size: 1.5rem;
+        font-family: geneva;
+      }
+
+      /*------------------ Delivery Partners -----------*/
+      #refer{
+          display: flex;
+          flex-direction: column;
+          background-color:white;
+          color:#808000;
+          align-items: center;
+          padding: 20px;
+
+      }
+      .gallery{
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-around;
+          box-sizing: border-box;
+      }
+      .gallery img{
+          width: 300px;
+          height: 150px;
+          margin: 10px;
+          border: solid wheat;
+      }
+      .headings{
+        font-size: 3rem;
+        font-weight: 500;
+      }
+
+      /*----------------------customer speaks ----------------------*/
+      #cust{
+          display: flex;
+          flex-direction: column;
+          background-color:white;
+          color:#808000;
+          align-items: center;
+          padding: 20px;
+
+      }
+      .headings{
+        font-size: 3rem;
+        font-weight: 500;
+      }
+
+      /*---------------------- contact us -------------------------*/
+      #contact{
+          display: flex;
+          flex-direction: column;
+          box-sizing: border-box;
+          background-image: url("https://img.freepik.com/premium-photo/penne-pasta-tomato-sauce-with-meat-tomatoes-decorated-with-pea-sprouts-dark-table_2829-3412.jpg?w=900");
+          color: white;
+          padding: 20px;
+      }
+      .form{
+          display: flex;
+          flex-direction: column;
+          box-sizing: border-box;
+          align-items: center;
+          margin: 20px 0px;
+
+      }
+      .input{
+          padding: 12px;
+          margin: 15px;
+          width: 30%;
+          border: none;
+          outline: none;
+      }
+      #msg{
+          width: 20%;
+          padding: 10px;
+          margin: 15px;
+          border: none;
+          outline: none;
+
+      }
+      #send{
+          padding: 10px;
+          width: 10%;
+          margin: 40px;
+          border: none;
+          outline: none;
+
+      }
+      #send:hover{
+          cursor: pointer;
+          box-shadow: 0 0 10px white;
+      }
+      /*---------------- footer--------------------*/
+      .footer-basic {
+        padding:40px 0;
+        background-color:#ffffff;
+        color:#4b4c4d;
+      }
+      .footer-basic ul {
+        padding:0;
+        list-style:none;
+        text-align:center;
+        font-size:18px;
+        line-height:1.6;
+        margin-bottom:0;
+      }
+      .footer-basic li {
+        padding:0 10px;
+      }
+      .footer-basic ul a {
+        color:inherit;
+        text-decoration:none;
+        opacity:0.8;
+      }
+      .footer-basic ul a:hover {
+        opacity:1;
+      }
+      .footer-basic .social {
+        text-align:center;
+        padding-bottom:25px;
+      }
+      .footer-basic .social > a {
+        font-size:24px;
+        width:40px;
+        height:40px;
+        line-height:40px;
+        display:inline-block;
+        text-align:center;
+        border-radius:50%;
+        border:1px solid #ccc;
+        margin:0 8px;
+        color:inherit;
+        opacity:0.75;
+      }
+      .footer-basic .social > a:hover {
+        opacity:0.9;
+      }
+      .footer-basic .copyright {
+        margin-top:15px;
+        text-align:center;
+        font-size:13px;
+        color:#aaa;
+        margin-bottom:0;
+      }
+    </style>
+  </head>
+
+
+  <body>
+    <a href="/">
+    <nav class="navbar navbar-expand-lg">
+  <div class="container">
+    <a class="navbar-brand" href="#"><img src="https://cdn.logojoy.com/wp-content/uploads/2018/05/15150201/4122.png" width="140" height="140" alt="logo"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav m-auto mb-2 mb-lg-0">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+        <li class="nav-item">
+          <a class="nav-link"href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#about py-5">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#refer">Delivery Partners</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link" href="#cust" class="fill">Reviews</a>
+        </li>
+        <li>
+        <li class = "nav-item">
+          <a class = "nav-link" href = "order"> Order</a>
+        </li>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+          <button class="btn0" style="border-radius: 12px;"><a href="signup" style="color: inherit;">Register</a></button>
+        </li>
+        <li>
+          <button class="btn1 mx-4" style="border-radius: 12px;"><a href="login" style="color: inherit;">Login</a></button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  <!--------------------- main section------------>
+  <section class="main py-5">
+    <div class="container py-4">
+      <div class="row">
+        <div class="col-lg-7">
+          <h1>Olive Gardens<br>Life is full of new tastes</h1><br/>
+
+          <button class="btn2 mt-5"><a href="menu" style="color: inherit;">Menu</a></button>
+        </div>
+      </div>  
+    </div>
+  </section>
+  <!-------------------------about us---------------->
+  <section id="about py-5">
+    <div class="container-fluid py-5">
+      <h1>About Us</h1><br>
+      <div id="pic">
+            <img src="https://www.rappler.com/tachyon/2022/09/Front-scaled.jpg?fit=1024%2C1024" alt="a pic of our restraunt">
+            <div id="abt">
+                <h2>From Kitchen To Your Table</h2><br>
+                <p>
+                    The food you love...The Tradition we follow... We welcome you to indulge in our traditional creations....
+                    We serve a wide variety of authentic Italian, Indian and Indo Chinese cuisine. Cooking is an art and our chefs have mastered the art by combining traditional recipes and adding their own personal touch to it. Every delicious dish that leaves our kitchen is created by one of our highly acclaimed chefs. Whether you eat a simple Chicken lasagne or our signature dish Spaghetti Alla Carbonara, you are sure to enjoy the tantalizing flavors we have to offer.
+                </p>
+            </div>
+      </div>
+    </div>
+  </section>
+  <!--------------------------- references ------------------------------------>
+  <section id="refer">
+        <h1 class="headings">Delivery Partners</h1><br>
+        <div class="gallery">
+            <a href="https://www.zomato.com/"><img src="https://couponswala.com/blog/wp-content/uploads/2020/07/zomato-online-order-696x392.jpg" alt="organic tattva logo"></a>
+            <a href="https://www.swiggy.com/"><img src="https://www.kindpng.com/picc/m/3-37814_swiggy-logo-png-image-free-download-searchpng-swiggy.png" alt="conscious food logo"></a>
+        </div>
+  </section>
+<!--------------------------------- customer speaks --------------------------------->
+  <section id="cust">
+    <h1 class="headings">Reviews</h1><br>
+    <div class="container">
+    <div class="row gy-4">
+        <div class="col-sm">
+            <div class="card h-100">
+                <img src="https://media-exp1.licdn.com/dms/image/C5103AQHTwgE_JoyyzA/profile-displayphoto-shrink_200_200/0/1533584760045?e=1673481600&v=beta&t=7CqNgzSjz7q-6UcovcA2bBYvlGRmRNBNEcGJizH91e8" class="card-img-top" alt="girl">
+                <div class="card-body">
+                    <h5 class="card-title fw-bold">Priya-</h5>
+                    <p class="card-text" style = "color: brown">This place is great! Atmosphere is chill and cool but the staff is also really friendly. They know what they’re doing and what they’re talking about, and you can tell making the customers happy is their main priority. Food is pretty good, some italian classics and some twists, and for their prices it’s 100% worth it
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm">
+            <div class="card h-100">
+                <img src="https://media-exp1.licdn.com/dms/image/C5603AQHdgzcPYvJg1Q/profile-displayphoto-shrink_800_800/0/1612824699367?e=2147483647&v=beta&t=RO89WY5A9AvdsDl6kYKpxIV8yzGDNVw9VZMRQktgLBs" class="card-img-top" alt="girl">
+                <div class="card-body">
+                    <h5 class="card-title fw-bold">Bhavi-</h5>
+                    <p class="card-text" style = "color: brown">"Excellent food. Menu is extensive and seasonal to a particularly high standard. Definitely fine dining. It can be expensive but worth it and they do different deals on different nights so it’s worth checking them out before you book. Highly recommended."</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm">
+            <div class="card h-100">
+                <img src="https://fuzeimages.s3.ap-south-1.amazonaws.com/wp-content/uploads/2019/07/17015536/KaranVGrover-61.jpg" class="card-img-top" alt="boy" height = 250px>
+                <div class="card-body">
+                    <h5 class="card-title fw-bold">Akhil-</h5>
+                    <p class="card-text" style = "color : brown">"Amazing experience! If you thought gourmet kitchen will leave you hungry, think again. You should skip several meals before visiting this amazing restaurant. Everything is so tasty, you cannot restraint yourself from having all of the dishes."</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm">
+            <div class="card h-100">
+                <img src="https://assets2.charmboard.com/ik-seo//im/cc_square/1455042/zain-imam.jpg?tr=w-375,ar-9.5-10-,cm-pad_resize" class="card-img-top" alt="man" height = 250px>
+                <div class="card-body">
+                    <h5 class="card-title fw-bold">Indru-</h5>
+                    <p class="card-text" style = "color:brown">Absolutely amazing! The place is beautiful and staff are super friendly and the food is delicious. I love that you get a lot of food as well for the price. It’s definitely not like other expensive restaurants and you only get a small amount of food. I am definitely going back.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+  </section>
+  
+  
+<!--------------------------------------------footer------------------------------------------------------------->
+<footer>
+  <div class="footer-basic">
+    <footer>
+        <div class="social"><a href="https://www.instagram.com/accounts/login/"><i class="icon ion-social-instagram"></i></a><a href="https://www.google.com/"><i class="icon ion-social-google"></i></a><a href="https://twitter.com/i/flow/login"><i class="icon ion-social-twitter"></i></a><a href="https://www.facebook.com/login.php/"><i class="icon ion-social-facebook"></i></a></div>
+        <ul class="list-inline">
+            <li class="list-inline-item"><a href="#">Home</a></li>
+            <li class="list-inline-item"><a href="#about py-5">About</a></li>
+            <li class="list-inline-item"><a href="#refer">Delivery Partners</a></li>
+            <li class="list-inline-item"><a href="#cust">Reviews</a></li>
+        </ul>
+        <p class="copyright">Olive Garden © 2022</p>
+    </footer>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+</footer>
+    </a>
+  </body>
+</html>
